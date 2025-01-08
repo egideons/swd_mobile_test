@@ -1,16 +1,26 @@
-# swd_mobile_app_test
+# Mobile Test Assessment
 
-A new Flutter project.
+A mobile application test project for [SWD-LTD](https://www.crunchbase.com/organization/soft-web-digital)
 
-## Getting Started
+Developer: Chukwuoma Gideon Chimemerie
 
-This project is a starting point for a Flutter application.
+📫 You can reach me here: [Mail](mailto:gideon.dart@gmail.com).
 
-A few resources to get you started if this is your first Flutter project:
+## Framework Info
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Built with [Flutter](https://flutter.dev)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `Flutter 3.27.3 • channel stable`
+- `Engine • revision 83bacfc525`
+- `Tools • Dart 3.6.0 • DevTools 2.40.2`
+
+## How to download the APK
+
+- Click on `SWD Mobile Test App` under [Releases](https://github.com/egideons/https://github.com/egideons/swd_mobile_test/releases)
+- You will see `app-release.apk` under Assets
+- Click on it to download the app
+
+or
+
+- Click [here](https://drive.google.com/drive/folders/19YC53mm1GeixNmnx9Iwky8ghPf1yG-Nl?usp=sharing)
+  to download from Google Drive
