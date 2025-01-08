@@ -1,8 +1,15 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:swd_mobile_app_test/app/home/modules/home_app_bar.dart';
 import 'package:swd_mobile_app_test/app/home/modules/home_floating_action_button.dart';
+import 'package:swd_mobile_app_test/app/home/modules/news_and_updates.dart';
+import 'package:swd_mobile_app_test/app/home/modules/quick_actions.dart';
+import 'package:swd_mobile_app_test/app/home/modules/view_all_text_button.dart';
+import 'package:swd_mobile_app_test/app/home/modules/wallet_section.dart';
+import 'package:swd_mobile_app_test/src/constants/assets.dart';
 import 'package:swd_mobile_app_test/src/constants/consts.dart';
 import 'package:swd_mobile_app_test/src/controllers/home_controller.dart';
 import 'package:swd_mobile_app_test/theme/colors.dart';
@@ -25,8 +32,8 @@ class HomeScreen extends GetView<HomeController> {
           child: ListView(
             children: [
               Container(
-                height: size.height / 4,
                 width: size.width,
+                padding: const EdgeInsets.all(10),
                 decoration: ShapeDecoration(
                   color: colorScheme.inverseSurface,
                   shape: RoundedRectangleBorder(
@@ -35,6 +42,120 @@ class HomeScreen extends GetView<HomeController> {
                       bottomRight: Radius.circular(32),
                     ),
                   ),
+                ),
+                child: Column(
+                  children: [
+                    walletSection(size, colorScheme, controller),
+                    20.toHeight,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              tooltip: "Add funds",
+                              padding: const EdgeInsets.all(0),
+                              style: IconButton.styleFrom(
+                                padding: const EdgeInsets.all(0),
+                              ),
+                              icon: SvgPicture.asset(
+                                Assets.topupSvg,
+                                height: 26,
+                              ),
+                            ),
+                            Text(
+                              "Top up",
+                              style: defaultTextStyle(
+                                fontSize: 14,
+                                color: colorScheme.surface,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        26.toWidth,
+                        Container(
+                          width: 1,
+                          height: 20,
+                          color: kLightGreyColor,
+                        ),
+                        26.toWidth,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              tooltip: "Transfer funds",
+                              padding: const EdgeInsets.all(0),
+                              style: IconButton.styleFrom(
+                                padding: const EdgeInsets.all(0),
+                              ),
+                              icon: SvgPicture.asset(
+                                Assets.sendSvg,
+                                height: 26,
+                              ),
+                            ),
+                            Text(
+                              "Transfer",
+                              style: defaultTextStyle(
+                                fontSize: 14,
+                                color: colorScheme.surface,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        26.toWidth,
+                        Container(
+                          width: 1,
+                          height: 20,
+                          color: kLightGreyColor,
+                        ),
+                        26.toWidth,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              tooltip: "Transaction History",
+                              padding: const EdgeInsets.all(0),
+                              style: IconButton.styleFrom(
+                                padding: const EdgeInsets.all(0),
+                              ),
+                              icon: SvgPicture.asset(
+                                Assets.historySvg,
+                                height: 26,
+                              ),
+                            ),
+                            Text(
+                              "History",
+                              style: defaultTextStyle(
+                                fontSize: 14,
+                                color: colorScheme.surface,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    40.toHeight,
+                    Center(
+                      child: Container(
+                        width: 40,
+                        height: 6,
+                        decoration: ShapeDecoration(
+                          color: kLightGreyColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               20.toHeight,
@@ -52,52 +173,10 @@ class HomeScreen extends GetView<HomeController> {
                       ),
                     ),
                     10.toHeight,
-                    Wrap(
-                      spacing: 4,
-                      runSpacing: 4,
-                      children: List.generate(controller.quickActions.length,
-                          (index) {
-                        var quickActions = controller.quickActions[index];
-                        return InkWell(
-                          onTap: quickActions["onPressed"] as VoidCallback,
-                          child: Container(
-                            width: MediaQuery.of(context).size.width / 4 - 8,
-                            height: 100,
-                            padding: const EdgeInsets.all(10),
-                            decoration: ShapeDecoration(
-                              color: kGreyColor,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                10.toHeight,
-                                SvgPicture.asset(
-                                  quickActions["icon"] as String,
-                                  height: 30,
-                                ),
-                                4.toHeight,
-                                Text(
-                                  quickActions["name"] as String,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: defaultTextStyle(
-                                    fontSize: 14,
-                                    color: colorScheme.inverseSurface,
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: -0.8,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
+                    quickActionsSection(context, colorScheme, controller),
                     26.toHeight,
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -108,56 +187,11 @@ class HomeScreen extends GetView<HomeController> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          child: RichText(
-                            textAlign: TextAlign.center,
-                            text: TextSpan(
-                              text: "",
-                              children: [
-                                WidgetSpan(
-                                  alignment: PlaceholderAlignment.middle,
-                                  child: GestureDetector(
-                                    onTap: () {},
-                                    child: ShaderMask(
-                                      shaderCallback: (bounds) =>
-                                          LinearGradient(
-                                        colors: [
-                                          kPrimarySolidColor,
-                                          kPrimarySolidColor2,
-                                        ],
-                                      ).createShader(
-                                        Rect.fromLTWH(
-                                          0,
-                                          0,
-                                          bounds.width,
-                                          bounds.height,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        "View All",
-                                        style: defaultTextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                        viewAllTextButton(),
                       ],
                     ),
                     10.toHeight,
-                    ListView.separated(
-                      separatorBuilder: (context, index) => 20.toWidth,
-                      itemCount: controller.newsAndUpdatesImages.length,
-                      itemBuilder: (context, index) {
-                        return Container();
-                      },
-                    ),
+                    newsAndUpdatesSection(size, controller),
                   ],
                 ),
               ),

@@ -1,15 +1,61 @@
 import 'dart:developer';
 
+import 'package:delightful_toast/delight_toast.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:swd_mobile_app_test/main.dart';
 import 'package:swd_mobile_app_test/src/constants/assets.dart';
+import 'package:swd_mobile_app_test/src/utils/containers/toast/message_alert_toast.dart';
+import 'package:swd_mobile_app_test/theme/colors.dart';
 
 class HomeController extends GetxController {
   static HomeController get instance {
     return Get.find<HomeController>();
   }
 
+  @override
+  void onInit() {
+    super.onInit();
+    loadVisibilityState();
+  }
+
   var firstName = prefs.getString("firstName");
+  var walletBalanceIsHidden = false.obs;
+  var accountNumber = "8192017482".obs;
+
+  //================= Wallet ====================\\
+  toggleWalletBalanceVisibility() {
+    saveVisibilityState(!walletBalanceIsHidden.value);
+    walletBalanceIsHidden.value = !walletBalanceIsHidden.value;
+  }
+
+  Future<void> loadVisibilityState() async {
+    walletBalanceIsHidden.value =
+        prefs.getBool('walletBalanceIsHidden') ?? walletBalanceIsHidden.value;
+    update();
+  }
+
+  // Save visibility state to SharedPreferences
+  Future<void> saveVisibilityState(bool value) async {
+    await prefs.setBool('walletBalanceIsHidden', value);
+  }
+
+  copyAccountNumber() {
+    Clipboard.setData(ClipboardData(text: accountNumber.value));
+    if (accountNumber.value.isNotEmpty) {
+      DelightToastBar(
+          autoDismiss: true,
+          builder: (context) {
+            return MessageAlertToast(
+              title: "Text Copied",
+              message: "${accountNumber.value} copied to clipboard",
+              appLogo: "",
+              isSuccess: true,
+              color: kSuccessColor,
+            );
+          }).show(Get.context!);
+    }
+  }
 
   var quickActions = [
     {

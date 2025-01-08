@@ -23,6 +23,7 @@ homeAppBar(ColorScheme colorScheme, HomeController controller) {
         ),
         child: IconButton(
           onPressed: () {},
+          tooltip: "Profile",
           icon: Icon(Iconsax.user, color: kGreyColor),
         ),
       ),
@@ -48,6 +49,7 @@ homeAppBar(ColorScheme colorScheme, HomeController controller) {
         ),
         child: IconButton(
           onPressed: () {},
+          tooltip: "Notifications",
           icon: Icon(Iconsax.notification, color: kGreyColor),
         ),
       ),
