@@ -23,7 +23,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
                       "First Name",
                       textAlign: TextAlign.center,
                       style: defaultTextStyle(
-                        color: colorScheme.primary,
+                        color: colorScheme.inverseSurface,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                       ),
@@ -48,7 +48,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
                           width: 1,
-                          color: colorScheme.primary,
+                          color: colorScheme.inverseSurface,
                         ),
                       ),
                       errorBorder: OutlineInputBorder(
@@ -72,7 +72,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
                       "Last Name",
                       textAlign: TextAlign.center,
                       style: defaultTextStyle(
-                        color: colorScheme.primary,
+                        color: colorScheme.inverseSurface,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                       ),
@@ -97,7 +97,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
                           width: 1,
-                          color: colorScheme.primary,
+                          color: colorScheme.inverseSurface,
                         ),
                       ),
                       errorBorder: OutlineInputBorder(
@@ -118,7 +118,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
             "Phone number",
             textAlign: TextAlign.center,
             style: defaultTextStyle(
-              color: colorScheme.primary,
+              color: colorScheme.inverseSurface,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
@@ -143,7 +143,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             errorBorder: OutlineInputBorder(
@@ -159,7 +159,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
             "Email address",
             textAlign: TextAlign.center,
             style: defaultTextStyle(
-              color: colorScheme.primary,
+              color: colorScheme.inverseSurface,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
@@ -185,7 +185,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             errorBorder: OutlineInputBorder(
@@ -201,7 +201,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
             "Create Password",
             textAlign: TextAlign.center,
             style: defaultTextStyle(
-              color: colorScheme.primary,
+              color: colorScheme.inverseSurface,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
@@ -225,7 +225,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
                 controller.passwordIsHidden.value
                     ? Iconsax.eye_slash
                     : Iconsax.eye,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             enabledBorder: OutlineInputBorder(
@@ -239,7 +239,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             errorBorder: OutlineInputBorder(
@@ -255,7 +255,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
             "Referral Code (Optional)",
             textAlign: TextAlign.center,
             style: defaultTextStyle(
-              color: colorScheme.primary,
+              color: colorScheme.inverseSurface,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
@@ -283,7 +283,7 @@ signupForm(SignupController controller, ColorScheme colorScheme) {
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             errorBorder: OutlineInputBorder(

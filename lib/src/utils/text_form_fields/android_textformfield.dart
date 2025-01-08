@@ -117,7 +117,7 @@ class AndroidTextFormField extends StatelessWidget {
       keyboardAppearance: Get.isDarkMode ? Brightness.dark : Brightness.light,
       style: defaultTextStyle(
         fontSize: 16.0,
-        color: kFormFieldTextColor,
+        color: colorScheme.inverseSurface,
         fontWeight: FontWeight.w400,
       ),
       decoration: InputDecoration(
@@ -143,12 +143,12 @@ class AndroidTextFormField extends StatelessWidget {
         focusColor: const Color(0xFFF6F6F7),
         labelStyle: defaultTextStyle(
           fontSize: 16.0,
-          color: kFormFieldTextColor,
+          color: kTextGreyColor,
           fontWeight: FontWeight.w400,
         ),
         hintStyle: defaultTextStyle(
           fontSize: 16.0,
-          color: kFormFieldTextColor,
+          color: kTextGreyColor,
           fontWeight: FontWeight.w400,
         ),
         // errorStyle: const TextStyle(color: Colors.red),

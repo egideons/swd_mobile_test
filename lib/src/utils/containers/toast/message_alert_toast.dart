@@ -1,5 +1,6 @@
 import 'package:delightful_toast/toast/components/toast_card.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:swd_mobile_app_test/src/constants/consts.dart';
 
 import '../../../../theme/colors.dart';
@@ -7,8 +8,12 @@ import '../../../../theme/colors.dart';
 class MessageAlertToast extends StatelessWidget {
   final String title, message, appLogo;
   final Color color;
+  final bool isError, isWarning, isSuccess;
   const MessageAlertToast({
     super.key,
+    this.isWarning = false,
+    required this.isSuccess,
+    this.isError = false,
     required this.title,
     required this.message,
     required this.appLogo,
@@ -22,7 +27,13 @@ class MessageAlertToast extends StatelessWidget {
     return ToastCard(
       color: kGreyColor,
       leading: appLogo.isEmpty
-          ? null
+          ? isSuccess
+              ? Icon(Iconsax.tick_circle, color: color)
+              : isError
+                  ? Icon(Iconsax.close_circle, color: color)
+                  : isWarning
+                      ? Icon(Iconsax.warning_2, color: color)
+                      : null
           : Image.asset(appLogo, color: kPrimarySolidColor),
       title: title.isEmpty
           ? Text("")
@@ -40,7 +51,7 @@ class MessageAlertToast extends StatelessWidget {
         maxLines: 2,
         style: defaultTextStyle(
           fontWeight: FontWeight.w600,
-          color: colorScheme.primary,
+          color: colorScheme.inverseSurface,
           fontSize: 14,
         ),
       ),

@@ -90,6 +90,8 @@ class LoginController extends GetxController {
                 title: "Alert",
                 message: "Please create an account",
                 appLogo: "",
+                isSuccess: false,
+                isError: true,
                 color: kErrorColor,
               );
             }).show(Get.context!);
@@ -103,6 +105,8 @@ class LoginController extends GetxController {
                   title: "Error",
                   message: "Invalid Email",
                   appLogo: "",
+                  isSuccess: false,
+                  isError: true,
                   color: kErrorColor,
                 );
               }).show(Get.context!);
@@ -115,6 +119,8 @@ class LoginController extends GetxController {
                   title: "Error",
                   message: "Invalid Password",
                   appLogo: "",
+                  isSuccess: false,
+                  isError: true,
                   color: kErrorColor,
                 );
               }).show(Get.context!);
@@ -122,7 +128,7 @@ class LoginController extends GetxController {
         } else {
           isLoading.value = true;
 
-          await Future.delayed(const Duration(seconds: 3));
+          await Future.delayed(const Duration(seconds: 2));
           DelightToastBar(
               autoDismiss: true,
               builder: (context) {
@@ -130,13 +136,13 @@ class LoginController extends GetxController {
                   title: "Success",
                   message: "Login Successful",
                   appLogo: "",
+                  isSuccess: true,
                   color: kSuccessColor,
                 );
               }).show(Get.context!);
 
-          Get.offAllNamed(
-            Routes.home,
-          );
+          await Future.delayed(const Duration(milliseconds: 800));
+          Get.offAllNamed(Routes.bottomNavView);
 
           isLoading.value = false;
         }

@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
     //Android App
     return GetMaterialApp(
       title: "SWD Mobile",
-      color: kPrimarySolidColor,
+      // color: kPrimarySolidColor,
       navigatorKey: Get.key,
       defaultTransition: Transition.native,
       debugShowCheckedModeBanner: false,
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
       getPages: Routes.getPages,
       theme: androidLightTheme,
       darkTheme: androidDarkTheme,
-      // themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.dark,
       scrollBehavior: ScrollConfiguration.of(context).copyWith(
         multitouchDragStrategy: MultitouchDragStrategy.sumAllPointers,
         scrollbars: true,

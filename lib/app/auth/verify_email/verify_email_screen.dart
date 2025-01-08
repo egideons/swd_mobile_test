@@ -38,7 +38,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
                       "Verify your email",
                       textAlign: TextAlign.start,
                       style: defaultTextStyle(
-                        color: colorScheme.primary,
+                        color: colorScheme.inverseSurface,
                         fontSize: 30,
                         fontWeight: FontWeight.w300,
                       ),
@@ -48,7 +48,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
                       "Please enter the OTP sent to",
                       textAlign: TextAlign.start,
                       style: defaultTextStyle(
-                        color: kGreyColor,
+                        color: Colors.grey.shade300,
                         fontSize: 16,
                         fontWeight: FontWeight.w300,
                       ),
@@ -58,7 +58,7 @@ class VerifyEmailScreen extends GetView<VerifyEmailController> {
                       controller.email,
                       textAlign: TextAlign.start,
                       style: defaultTextStyle(
-                        color: colorScheme.primary,
+                        color: colorScheme.inverseSurface,
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),

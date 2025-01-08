@@ -17,7 +17,7 @@ loginForm(ColorScheme colorScheme, LoginController controller) {
             "Email address",
             textAlign: TextAlign.center,
             style: defaultTextStyle(
-              color: colorScheme.primary,
+              color: colorScheme.inverseSurface,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
@@ -43,7 +43,7 @@ loginForm(ColorScheme colorScheme, LoginController controller) {
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             errorBorder: OutlineInputBorder(
@@ -59,7 +59,7 @@ loginForm(ColorScheme colorScheme, LoginController controller) {
             "Password",
             textAlign: TextAlign.center,
             style: defaultTextStyle(
-              color: colorScheme.primary,
+              color: colorScheme.inverseSurface,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
@@ -83,7 +83,7 @@ loginForm(ColorScheme colorScheme, LoginController controller) {
                 controller.passwordIsHidden.value
                     ? Iconsax.eye_slash
                     : Iconsax.eye,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             enabledBorder: OutlineInputBorder(
@@ -97,7 +97,7 @@ loginForm(ColorScheme colorScheme, LoginController controller) {
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
                 width: 1,
-                color: colorScheme.primary,
+                color: colorScheme.inverseSurface,
               ),
             ),
             errorBorder: OutlineInputBorder(
@@ -116,7 +116,6 @@ loginForm(ColorScheme colorScheme, LoginController controller) {
                 "Forgot password?",
                 textAlign: TextAlign.left,
                 style: defaultTextStyle(
-                  color: kTextGreyColor,
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                 ),

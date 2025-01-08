@@ -75,8 +75,8 @@ class AndroidElevatedButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           gradient: RadialGradient(
             colors: [
-              Color(0xFFEF9258).withOpacity(1),
-              Color(0xFFEF5757).withOpacity(1),
+              Color(0xFFEF9258).withOpacity(.9),
+              Color(0xFFEF5757).withOpacity(.9),
             ],
             stops: [.4, .8],
             radius: 3.6,
@@ -84,7 +84,7 @@ class AndroidElevatedButton extends StatelessWidget {
           ),
         ),
         child: isLoading
-            ? CupertinoActivityIndicator(color: colorScheme.primary)
+            ? CupertinoActivityIndicator(color: colorScheme.inverseSurface)
             : Center(
                 child: Text(
                   title,

@@ -9,6 +9,23 @@ class Assets {
 //PNG
 
 //SVG
+  static const chatSvg = "assets/icons/svg/chat.svg";
+  static const topupSvg = "assets/icons/svg/topup.svg";
+  static const sendSvg = "assets/icons/svg/send.svg";
+  static const historySvg = "assets/icons/svg/history.svg";
+  static const dataSvg = "assets/icons/svg/data.svg";
+  static const airtimeSvg = "assets/icons/svg/airtime.svg";
+  static const showmaxSvg = "assets/icons/svg/showmax.svg";
+  static const giftcardsSvg = "assets/icons/svg/giftcards.svg";
+  static const bettingSvg = "assets/icons/svg/betting.svg";
+  static const electricitySvg = "assets/icons/svg/electricity.svg";
+  static const tvcableSvg = "assets/icons/svg/tvcable.svg";
+  static const epinSvg = "assets/icons/svg/epin.svg";
+  static const homeSvg = "assets/icons/svg/home.svg";
+  static const servicesSvg = "assets/icons/svg/services.svg";
+  static const statisticsSvg = "assets/icons/svg/statistics.svg";
+  static const referralsSvg = "assets/icons/svg/referrals.svg";
+  static const settingsSvg = "assets/icons/svg/settings.svg";
 
 //=================== Animations ===================\\
 

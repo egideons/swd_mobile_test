@@ -129,11 +129,13 @@ class SignupController extends GetxController {
               title: "Success",
               message: "Signup Successful",
               appLogo: "",
+              isSuccess: true,
               color: kSuccessColor,
             );
           }).show(Get.context!);
 
       isLoading.value = false;
+      await Future.delayed(const Duration(milliseconds: 800));
       Get.toNamed(
         Routes.verifyEmail,
         arguments: {

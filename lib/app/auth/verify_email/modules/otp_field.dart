@@ -39,7 +39,7 @@ buildOTPField(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(
             width: 1,
-            color: colorScheme.primary,
+            color: colorScheme.inverseSurface,
           ),
         ),
         errorBorder: OutlineInputBorder(

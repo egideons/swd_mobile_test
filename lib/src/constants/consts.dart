@@ -112,7 +112,7 @@ defaultTextStyle({
   double? letterSpacing,
 }) =>
     TextStyle(
-      // color: color ?? Colors.grey,
+      color: color ?? Colors.grey,
       background: background,
       backgroundColor: backgroundColor,
       decoration: decoration ?? TextDecoration.none,

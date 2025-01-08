@@ -92,6 +92,8 @@ class VerifyEmailController extends GetxController {
               message: "Field at position ${index + 1} cannot be empty",
               appLogo: "",
               color: kErrorColor,
+              isSuccess: false,
+              isError: true,
             );
           }).show(Get.context!);
       return;
@@ -109,6 +111,8 @@ class VerifyEmailController extends GetxController {
               message: "Fields cannot be empty",
               appLogo: "",
               color: kErrorColor,
+              isSuccess: false,
+              isError: true,
             );
           }).show(Get.context!);
       return;
@@ -153,10 +157,11 @@ class VerifyEmailController extends GetxController {
               message: "Verification Successful",
               appLogo: "",
               color: kSuccessColor,
+              isSuccess: true,
             );
           }).show(Get.context!);
 
-      Get.toNamed(Routes.home);
+      Get.offAllNamed(Routes.bottomNavView);
       isLoading.value = false;
     }
   }

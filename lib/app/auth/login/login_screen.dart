@@ -52,7 +52,7 @@ class LoginScreen extends GetView<LoginController> {
                       "Welcome back 👋🏾",
                       textAlign: TextAlign.center,
                       style: defaultTextStyle(
-                        color: colorScheme.primary,
+                        color: colorScheme.inverseSurface,
                         fontSize: 30,
                         fontWeight: FontWeight.w300,
                       ),
@@ -74,7 +74,6 @@ class LoginScreen extends GetView<LoginController> {
                         style: defaultTextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
-                          color: kTextGreyColor,
                         ),
                         children: [
                           WidgetSpan(
@@ -93,20 +92,13 @@ class LoginScreen extends GetView<LoginController> {
                                   ],
                                 ).createShader(
                                   Rect.fromLTWH(
-                                    -20,
                                     0,
-                                    40,
                                     0,
+                                    bounds.width,
+                                    bounds.height,
                                   ),
                                 ),
-                                child: Text(
-                                  "Create account",
-                                  style: defaultTextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500,
-                                    color: colorScheme.primary,
-                                  ),
-                                ),
+                                child: Text("Create account"),
                               ),
                             ),
                           ),

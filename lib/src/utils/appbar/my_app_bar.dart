@@ -20,13 +20,13 @@ myAppBar(ColorScheme colorScheme,
         children: [
           Icon(
             Icons.chevron_left,
-            color: colorScheme.primary,
+            color: kLightGreyColor,
           ),
           10.toWidth,
           Text(
             "Back",
             style: defaultTextStyle(
-              color: kGreyColor,
+              color: kLightGreyColor,
               fontWeight: FontWeight.w400,
               fontSize: 14,
             ),

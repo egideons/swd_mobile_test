@@ -39,7 +39,7 @@ class SignupScreen extends GetView<SignupController> {
                       "Create an account",
                       textAlign: TextAlign.center,
                       style: defaultTextStyle(
-                        color: colorScheme.primary,
+                        color: colorScheme.inverseSurface,
                         fontSize: 30,
                         fontWeight: FontWeight.w300,
                       ),

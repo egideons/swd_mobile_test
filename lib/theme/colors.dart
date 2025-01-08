@@ -29,14 +29,16 @@ var kBackgroundColor = RadialGradient(
 
 Color kAccentColor = const Color(0xFF41B696);
 Color kSecondaryColor = const Color(0xFF41B696);
+Color kTextWhiteColor = const Color(0xFFFFFFFF);
 
 Color kStarColor = Colors.amber;
 Color kSuccessColor = const Color(0xFF41B696);
 Color kGreyColor = Colors.grey.shade900;
+Color kLightGreyColor = Colors.grey.shade400;
 Color kTextFieldFillColor = Colors.grey.shade900;
-Color kBorderGreyColor = Colors.grey.shade600;
-Color kTextGreyColor = Colors.grey.shade800;
-Color kTextWhiteColor = const Color(0xFFFFFFFF);
+Color kBorderGreyColor = Colors.grey.shade500;
+Color kTextGreyColor = Colors.grey.shade700;
+
 Color kTransparentColor = const Color(0x00000000);
 
 Color kErrorColor = Colors.red;
