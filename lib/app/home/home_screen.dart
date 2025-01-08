@@ -1,18 +1,16 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:swd_mobile_app_test/app/home/modules/home_app_bar.dart';
 import 'package:swd_mobile_app_test/app/home/modules/home_floating_action_button.dart';
 import 'package:swd_mobile_app_test/app/home/modules/news_and_updates.dart';
 import 'package:swd_mobile_app_test/app/home/modules/quick_actions.dart';
+import 'package:swd_mobile_app_test/app/home/modules/top_section_action_buttons.dart';
 import 'package:swd_mobile_app_test/app/home/modules/view_all_text_button.dart';
 import 'package:swd_mobile_app_test/app/home/modules/wallet_section.dart';
-import 'package:swd_mobile_app_test/src/constants/assets.dart';
 import 'package:swd_mobile_app_test/src/constants/consts.dart';
 import 'package:swd_mobile_app_test/src/controllers/home_controller.dart';
-import 'package:swd_mobile_app_test/theme/colors.dart';
 
 class HomeScreen extends GetView<HomeController> {
   const HomeScreen({super.key});
@@ -47,108 +45,14 @@ class HomeScreen extends GetView<HomeController> {
                   children: [
                     walletSection(size, colorScheme, controller),
                     20.toHeight,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              tooltip: "Add funds",
-                              padding: const EdgeInsets.all(0),
-                              style: IconButton.styleFrom(
-                                padding: const EdgeInsets.all(0),
-                              ),
-                              icon: SvgPicture.asset(
-                                Assets.topupSvg,
-                                height: 26,
-                              ),
-                            ),
-                            Text(
-                              "Top up",
-                              style: defaultTextStyle(
-                                fontSize: 14,
-                                color: colorScheme.surface,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                        26.toWidth,
-                        Container(
-                          width: 1,
-                          height: 20,
-                          color: kLightGreyColor,
-                        ),
-                        26.toWidth,
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              tooltip: "Transfer funds",
-                              padding: const EdgeInsets.all(0),
-                              style: IconButton.styleFrom(
-                                padding: const EdgeInsets.all(0),
-                              ),
-                              icon: SvgPicture.asset(
-                                Assets.sendSvg,
-                                height: 26,
-                              ),
-                            ),
-                            Text(
-                              "Transfer",
-                              style: defaultTextStyle(
-                                fontSize: 14,
-                                color: colorScheme.surface,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                        26.toWidth,
-                        Container(
-                          width: 1,
-                          height: 20,
-                          color: kLightGreyColor,
-                        ),
-                        26.toWidth,
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              tooltip: "Transaction History",
-                              padding: const EdgeInsets.all(0),
-                              style: IconButton.styleFrom(
-                                padding: const EdgeInsets.all(0),
-                              ),
-                              icon: SvgPicture.asset(
-                                Assets.historySvg,
-                                height: 26,
-                              ),
-                            ),
-                            Text(
-                              "History",
-                              style: defaultTextStyle(
-                                fontSize: 14,
-                                color: colorScheme.surface,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                    topSectionActionButtons(colorScheme),
                     40.toHeight,
                     Center(
                       child: Container(
-                        width: 40,
+                        width: 60,
                         height: 6,
                         decoration: ShapeDecoration(
-                          color: kLightGreyColor,
+                          color: Colors.grey.shade300,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(32),
                           ),
