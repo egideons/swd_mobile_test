@@ -2,6 +2,8 @@ class Assets {
 //=================== Images ===================\\
 //PNG
   static const memojiPng = "assets/images/png/memoji.png";
+  static const news1Png = "assets/images/png/news_1.png";
+  static const news2Png = "assets/images/png/news_2.png";
 
 //SVG
 

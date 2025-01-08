@@ -33,7 +33,7 @@ Color kTextWhiteColor = const Color(0xFFFFFFFF);
 
 Color kStarColor = Colors.amber;
 Color kSuccessColor = const Color(0xFF41B696);
-Color kGreyColor = Colors.grey.shade900;
+Color kGreyColor = Colors.grey.shade800;
 Color kLightGreyColor = Colors.grey.shade400;
 Color kTextFieldFillColor = Colors.grey.shade900;
 Color kBorderGreyColor = Colors.grey.shade500;
