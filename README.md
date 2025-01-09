@@ -16,7 +16,7 @@ Built with [Flutter](https://flutter.dev)
 
 ## How to download the APK
 
-- Click on `SWD Mobile Test App` under [Releases](https://github.com/egideons/https://github.com/egideons/swd_mobile_test/releases)
+- Click on `SWD Mobile Test App` under [Releases](https://github.com/egideons/swd_mobile_test/releases)
 - You will see `app-release.apk` under Assets
 - Click on it to download the app
 
